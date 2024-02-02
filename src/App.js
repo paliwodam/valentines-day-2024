@@ -1,11 +1,22 @@
+import React, { useState } from 'react'
 import './App.css'
 import backgroundImage from './jotaro.png'
 import valentineImage from './valentine.png'
+import gun from './gun.png'
 
 const App = () => {
-  const handleButtonClick = () => {
-    // Define the functionality you want when the button is clicked
-    console.log('Button clicked!')
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+
+  const [clickedNo, setClickedNo] = useState(false)
+  const [xPos, setXPos] = useState(null)
+  const [yPos, setYPos] = useState()
+
+  const handleNoButtonClick = () => {
+    setClickedNo(true)
+    setXPos(Math.floor(Math.random() * windowWidth - 100))
+    setYPos(Math.floor(Math.random() * windowHeight - 100))
+    console.log(xPos, yPos)
   }
 
   return (
@@ -26,7 +37,7 @@ const App = () => {
     >
       <div
         style={{
-          backgroundImage: `url(${valentineImage})`,
+          backgroundImage: clickedNo ? `url(${gun})` : `url(${valentineImage})`,
           width: '380px', // Adjust the width as needed
           height: '410px', // Adjust the height as needed
           backgroundColor: 'white',
@@ -38,30 +49,37 @@ const App = () => {
 
       <div>
         <button
-          onClick={handleButtonClick} // Attach the click event handler
+          onClick={handleNoButtonClick} // Attach the click event handler
           style={{
             padding: '10px',
+            paddingInline: '20px',
             fontSize: '16px',
+            fontWeight: 'bold',
             margin: '20px',
             backgroundColor: 'pink',
             borderRadius: '10%',
             color: 'white', // Text color
-            fontSize: '60px',
+            fontSize: '40px',
             border: 'none', // Remove default button border
           }}
         >
           Yes
         </button>
         <button
-          onClick={handleButtonClick} // Attach the click event handler
+          onClick={handleNoButtonClick} // Attach the click event handler
           style={{
             padding: '10px',
             fontSize: '16px',
+            fontWeight: 'bold',
+            paddingInline: '20px',
+            position: 'absolute',
+            left: xPos,
+            top: yPos,
             margin: '20px',
             backgroundColor: 'black',
             borderRadius: '10%',
             color: 'white', // Text color
-            fontSize: '30px',
+            fontSize: '40px',
             border: 'none', // Remove default button border
           }}
         >
