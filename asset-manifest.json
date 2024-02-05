@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/valentines-day-2024/static/css/main.f855e6bc.css",
+    "main.js": "/valentines-day-2024/static/js/main.7f6bc146.js",
+    "static/js/592.84f11816.chunk.js": "/valentines-day-2024/static/js/592.84f11816.chunk.js",
+    "static/media/jotaro.png": "/valentines-day-2024/static/media/jotaro.46523bb44552602b69f0.png",
+    "static/media/gun_new.png": "/valentines-day-2024/static/media/gun_new.95fabc10872b564f8375.png",
+    "static/media/valentine_new.png": "/valentines-day-2024/static/media/valentine_new.b8d25b85acfc008ba861.png",
+    "static/media/happy-cat_new.gif": "/valentines-day-2024/static/media/happy-cat_new.b76f53735f16fe86b699.gif",
+    "index.html": "/valentines-day-2024/index.html",
+    "main.f855e6bc.css.map": "/valentines-day-2024/static/css/main.f855e6bc.css.map",
+    "main.7f6bc146.js.map": "/valentines-day-2024/static/js/main.7f6bc146.js.map",
+    "592.84f11816.chunk.js.map": "/valentines-day-2024/static/js/592.84f11816.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.7f6bc146.js"
+  ]
+}
